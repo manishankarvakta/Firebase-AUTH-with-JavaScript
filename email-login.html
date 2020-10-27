@@ -16,12 +16,30 @@
         <div class="col-md-4"></div>
         <div class="col-md-4">
           <img src="img/logo.png" class="rounded mx-auto d-block" alt="...">
-          <h3 class="text-center">Login with Firebase AUTH</h3>
+          <h4 class="text-center">Login with email and password</h4>
           <br>
-          <a href="email-login.html" type="button" class="btn btn-secondary btn-md btn-block"> <i class="fa fa-envelope"> </i> Login With Email</a>
-          <a href="phone.html" type="button" class="btn btn-success btn-md btn-block"> <i class="fa fa-phone"> </i> Login With Phone</a>
-          <a href="facebook.html" type="button" class="btn btn-primary btn-md btn-block"> <i class="fa fa-facebook"> </i> Login With Facebook</a>
-          <a href="google.html" type="button" class="btn btn-danger btn-md btn-block"> <i class="fa fa-google"> </i> Login With Google</a>
+          <form id="emailLogin">
+            <label class="sr-only" for="email">Email</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fa fa-envelope fa-fw"> </i></div>
+              </div>
+              <input type="email" class="form-control" id="email" placeholder="email">
+            </div>
+            <br>
+            <label class="sr-only" for="password">Password</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text"> <i class="fa fa-shield fa-fw"> </i></div>
+              </div>
+              <input type="password" class="form-control" id="password" placeholder="password">
+            </div>
+            <br>
+            
+            <a href="index.html" class="link"><i class="fa fa-arrow-left"></i> Back</a> | <a href="email-reg.html" class="link">Registration</a>
+
+            <button type="submit" id="LoginButton" class="btn btn-primary pull-right"> <i class="fa fa-lock"> </i> Login</button>
+          </form>
         </div>
         <div class="col-md-4"></div>
       </div>

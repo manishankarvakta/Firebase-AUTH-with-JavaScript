@@ -16,12 +16,20 @@
         <div class="col-md-4"></div>
         <div class="col-md-4">
           <img src="img/logo.png" class="rounded mx-auto d-block" alt="...">
-          <h3 class="text-center">Login with Firebase AUTH</h3>
+          <h4 class="text-center">Mobile Phone Verification</h4>
           <br>
-          <a href="email-login.html" type="button" class="btn btn-secondary btn-md btn-block"> <i class="fa fa-envelope"> </i> Login With Email</a>
-          <a href="phone.html" type="button" class="btn btn-success btn-md btn-block"> <i class="fa fa-phone"> </i> Login With Phone</a>
-          <a href="facebook.html" type="button" class="btn btn-primary btn-md btn-block"> <i class="fa fa-facebook"> </i> Login With Facebook</a>
-          <a href="google.html" type="button" class="btn btn-danger btn-md btn-block"> <i class="fa fa-google"> </i> Login With Google</a>
+          <form id="emailLogin">
+            <label class="sr-only" for="verify">Verification</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fa fa-code fa-fw"> </i></div>
+              </div>
+              <input type="number" class="form-control" id="verify" placeholder="xx xx xx">
+            </div>
+            <br>
+            <a href="phone.html" class="link">Send the code again</a>
+            <button type="submit" id="LoginButton" class="btn btn-primary pull-right"> <i class="fa fa-code fa-fw"> </i> Verify</button>
+          </form>  
         </div>
         <div class="col-md-4"></div>
       </div>
