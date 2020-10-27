@@ -1,2 +1,2 @@
-# Firebase-AUTH-with-JavaScript
+# Firebase AUTH with JavaScript
 firebase AUTH with JavaScript
