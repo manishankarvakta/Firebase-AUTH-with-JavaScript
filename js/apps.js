@@ -1,29 +1,13 @@
-// All login protocols go through this..
+// ==================
+// LogOut with User
+// ==================
 
-const auth = firebase.auth();
-const db = firebase.firestore();
-// database setting
-db.settings({timestampsInSnapshots: true});
+const logOutButton = document.querySelector('#logOut');
 
-// Registration with email
-const emailReg = document.querySelector("#emailReg");
-
-emailReg.addEventListener('submit', (e) => {
-  e.preventDefault();
-
-  // get user info
-  const email = emailReg['email'].value;
-  const password = emailReg['password'].value;
-
-  // signup user
-  auth.createUserWithEmailAndPassword(email, password).then(cred => {
-    console.log(cred.user);
-
-    // reset form
-    emailReg.reset();
-  });
-
-
+logOutButton.addEventListener('click', (e) => {
+  // auth.signOut().then(()=>{
+    alert('Sign Out Successful');
+  // });
 });
 
 

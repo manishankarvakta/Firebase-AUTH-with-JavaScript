@@ -12,4 +12,12 @@
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
+  // firebase.analytics();
+
+
+  // All login protocols go through this..
+
+const auth = firebase.auth();
+const db = firebase.firestore();
+// Firebase database setting
+db.settings({timestampsInSnapshots: true});
