@@ -1,13 +1,28 @@
 // ==================
+// Listen for auth status changes
+// ==================
+auth.onAuthStateChanged(user => {
+  if(user){
+    console.log('User Logged in: ', user.email);
+  }else{
+    console.log('User Logged Out');
+  }
+});
+
+
+
+
+
+// ==================
 // LogOut with User
 // ==================
 
 const logOutButton = document.querySelector('#logOut');
 
 logOutButton.addEventListener('click', (e) => {
-  // auth.signOut().then(()=>{
+  auth.signOut().then(()=>{
     alert('Sign Out Successful');
-  // });
+  });
 });
 
 

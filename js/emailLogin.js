@@ -13,10 +13,13 @@ emailReg.addEventListener('submit', (e) => {
 
   // signup user
   auth.signInWithEmailAndPassword(email, password).then(cred => {
-    console.log(cred.user);
+    // console.log(cred.user);
 
     // reset form
     emailReg.reset();
+
+    // redirect page
+    window.location.href = "index.html";
     
   });
 
