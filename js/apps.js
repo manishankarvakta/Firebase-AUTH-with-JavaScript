@@ -7,9 +7,8 @@ auth.onAuthStateChanged(user => {
   const title = document.querySelector('.title');
   const user_email = document.querySelector('.user_email');
 
-  console.log(login);
   if(user){
-    console.log('User Logged in: ', user.email);
+    // console.log('User Logged in: ', user.email);
 
     login.forEach(item => item.style.display = "none");   
     logout.style.display = "block";
@@ -42,11 +41,6 @@ logOutButton.addEventListener('click', (e) => {
 
 
 
-// FireBase Login codes  COnfig
-// const auth = firebase.auth();
-// const db = firebase.firestore();
-
-// db.settings({timestampsInSnapshots: true});
 
 
 // Login with Phone
@@ -55,6 +49,33 @@ logOutButton.addEventListener('click', (e) => {
 // verification capatcha
 
 // login with google
+
+const googleButton = document.querySelector('#googleButton');
+
+googleButton.addEventListener('click', (e) => {
+  var provider = new firebase.auth.GoogleAuthProvider();
+  
+  auth.signInWithPopup(provider).then(function(result) {
+
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    // var token = result.credential.accessToken;
+    // The signed-in user info.
+    var user = result.user;
+    console.log(user);
+  }).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    console.log(errorCode);
+  });
+});
+
+
+
 // login with Facebook
 
 
